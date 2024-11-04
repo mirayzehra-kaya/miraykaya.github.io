@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="style2-3" href="style2-3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <title>First Project</title>
+    <style>
+      body {
+          font-family: 'Manrope', sans-serif;
+      }
+      
+      @media only screen and (max-width: 768px) {
+        /* Header */
+        header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        header .main-nav ul {
+          flex-direction: column;
+        }
+        header .main-nav ul li {
+          margin-right: 0;
+        }
+        
+        /* Main content */
+        main > div {
+          padding-left: 20px;
+          padding-right: 20px;
+          
+        }
+        
+        /* Grid container */
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+        .grid-item {
+          grid-column: 1 / -1;
+        }
+        
+        /* Form container */
+        .form-container {
+          padding: 20px;
+        }
+        .form-container .column {
+          flex-basis: 100%;
+        }
+        
+        /* Footer */
+        footer {
+          flex-direction: column;
+          align-items: center;
+        }
+        footer .footer-nav ul {
+          flex-direction: column;
+        }
+        footer .footer-nav ul li {
+          margin-right: 0;
+        }
+      }
+      
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media only screen and (min-width: 1025px) {
+        .grid-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      
+      header {
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+      }
+      
+      header .main-nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
+      
+      header .main-nav ul li {
+          margin-right: 20px;
+      }
+      
+      header .main-nav ul li a {
+          color: white;
+          text-decoration: none;
+          padding: 5px 10px;
+      }
+      
+      header .main-nav ul li a:hover {
+          background-color: lightgray;
+          color: black; 
+      }
+      
+      header .main-nav ul li:last-child {
+          margin-right: 0;
+      }
+      
+      main > div {
+          padding-left: 50px;
+          padding-right: 50px;
+          background-color: white;
+      }
+      
+      .intro {
+          background-color: lightgray;
+          color: black;
+          padding: 20px; 
+          border: none; 
+      }
+      
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+        
+        .grid-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+        
+        .grid-item img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        
+        .grid-item p {
+          font-size: 16px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        
+        .button {
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+      }
+        
+        .button:hover {
+          background-color: #afafaf;
+          color: black;
+        }
+      
+        .form-container {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .form-container h2 {
+        margin-top: 0;
+      }
+      
+      .form-container form {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .form-container label, .form-container input[type="text"], .form-container input[type="date"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      .form-container label {
+        margin-bottom: 5px;
+      }
+      
+      .form-container input[type="radio"] {
+        margin-right: 10px;
+      }
+      
+      .form-container input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      
+      .form-container .column {
+        flex-basis: 50%;
+        padding: 10px;
+      }
+      
+      .form-container .column:first-child {
+        padding-right: 20px;
+        border-right: 1px solid #ddd;
+      }
+      
+      .form-container .column:last-child {
+        padding-left: 20px;
+      }
+      
+      .form-container input[type="submit"] {
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        
+      }
+      
+      .form-container input[type="submit"]:hover {
+          background-color: #afafaf;
+          color: black;
+      }
+      
+      footer {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+      
+      footer h2 {
+        margin-top: 0;
+      }
+      
+      footer .footer-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      footer .footer-nav ul li {
+        margin-right: 20px;
+      }
+      
+      footer .footer-nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+      
+      footer .footer-nav ul li a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+      
+      footer .footer-nav ul li:last-child {
+        margin-right: 0;
+      }
+      
+      footer p {
+        margin-top: 10px;
+        color: #ccc;
+      }
+
+      .main-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+          </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        Lorem Ipsum
+    </h1>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+        </ul>
+    </nav>
+</header>
+<div style="padding: 20px;"></div>
+
+<main>
+    <div class="main-img">
+        <img src="https://www.icolorpalette.com/download/solidcolorimage/fc6371_solid_color_background_icolorpalette.png">
+    </div>
+    <div style="padding: 20px;"></div>
+
+    <div class="intro">
+        <h2>
+            Lorem Ipsum 
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+    </div>
+    <div style="padding: 20px;"></div>
+    <div class="container">
+        <h2>
+            Lorem Ipsum
+        </h2>
+        <div class="grid-container">
+                <div class="grid-item">
+                <img src="https://static01.nyt.com/images/2018/03/04/magazine/04mag-pantone1/04mag-pantone1-superJumbo.png">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                <button class="button" type="btn btn-primary">Lorem Ipsum</button>
+                </div>
+                <div class="grid-item">
+                <img src="https://static01.nyt.com/images/2018/03/04/magazine/04mag-pantone1/04mag-pantone1-superJumbo.png">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                <button class="button" type="btn btn-primary">Lorem Ipsum</button>
+                </div>
+                <div class="grid-item">
+                <img src="https://static01.nyt.com/images/2018/03/04/magazine/04mag-pantone1/04mag-pantone1-superJumbo.png">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                <button class="button" type="btn btn-primary">Lorem Ipsum</button>
+                </div>
+                <div class="grid-item">
+                <img src="https://static01.nyt.com/images/2018/03/04/magazine/04mag-pantone1/04mag-pantone1-superJumbo.png">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                <button class="button" type="btn btn-primary">Lorem Ipsum</button>
+                </div>
+                <div class="grid-item">
+                <img src="https://static01.nyt.com/images/2018/03/04/magazine/04mag-pantone1/04mag-pantone1-superJumbo.png">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                <button class="button" type="btn btn-primary">Lorem Ipsum</button>
+                </div>
+                <div class="grid-item">
+                <img src="https://static01.nyt.com/images/2018/03/04/magazine/04mag-pantone1/04mag-pantone1-superJumbo.png">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                <button class="button" type="btn btn-primary">Lorem Ipsum</button>
+                </div>
+        </div> 
+    </div>
+
+    <div style="padding: 20px;"></div>
+
+    <div class="form-container">
+        <h2>
+          Lorem Ipsum
+        </h2>
+        <form action="#" method="post">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+          
+          <label for="surname">Surname:</label><br>
+          <input type="text" id="surname" name="surname" required><br><br>
+          
+          <label for="birthdate">Birthdate:</label><br>
+          <input type="date" id="birthdate" name="birthdate" required><br><br>
+          
+          <div class="column">
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label><br>
+          </div>
+          
+          <div class="column">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I accept the terms and conditions</label><br><br>
+            
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    
+</main>
+
+<div style="padding: 20px;"></div>
+
+<footer>
+    <h2>
+        Lorem Ipsum
+    </h2>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+        </ul>
+    </nav>
+    <p>&copy; 2024 Lorem Ipsum. All rights reserved.</p>
+</footer>
+
+<script src="js2-3.js"></script>
+
+</body>
+</html>

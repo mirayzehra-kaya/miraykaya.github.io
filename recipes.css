@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #5A0A80;
+    font-size: 40px; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#recipe-form {
+    background-color: #5A0A80;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #7b7979;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#recipe-form label {
+    color: white;
+    font-size: 18px; 
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+
+#recipe-form input[type="text"],
+#recipe-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px; 
+    box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+#recipe-form button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #7b7979;
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+
+#recipe-form button:hover {
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+#recipe-list {
+    margin-top: 20px;
+    display: flex; 
+    text-align: left; 
+  }
+
+ 
+  
